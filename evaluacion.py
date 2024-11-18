@@ -7,7 +7,7 @@ import pickle
 
 def preparacion(values):
     con = np.array(values[13])
-    columns = ['tyc', 'gaia', 'hyg', 'hip', 'hd', 'hr', 'gl', 'flam', 'ra','dec', 'mag', 'ci', 'rv']
+    columns = ["id",'tyc', 'gaia', 'hyg', 'hip', 'hd', 'hr', 'gl', 'flam', 'ra','dec', 'mag', 'ci', 'rv']
     
     constelations = np.array(['And', 'Ant', 'Aps', 'Aql', 'Aqr', 'Ara', 'Ari', 'Aur', 'Boo', 'CMa',
        'CMi', 'CVn', 'Cae', 'Cam', 'Cap', 'Car', 'Cas', 'Cen', 'Cep', 'Cet',
@@ -24,7 +24,7 @@ def preparacion(values):
    
     cons_values[col] = 1
     values  = np.delete(values,13)
-    values = np.concatenate((values,cons_values))
+    values = np.concatenate(([1],values,cons_values))
     
   
     values = [values]
