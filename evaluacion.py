@@ -24,7 +24,7 @@ def preparacion(values):
    
     cons_values[col] = 1
     values  = np.delete(values,13)
-    values = np.concatenate(([1],values,cons_values))
+    values = np.concatenate(([100],values,cons_values))
     
   
     values = [values]
