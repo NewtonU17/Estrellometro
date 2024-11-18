@@ -33,7 +33,7 @@ def preparacion(values):
 #x_data = preparacion(values)
 
 def prediccion(x_data):
-    modelo_escogido =  pk.load(open("modelo_final_Stars.pickle", "rb"))
+    modelo_escogido =  pk.load(open("model_simple.pickle", "rb"))
     dist = modelo_escogido.predict(x_data)
     return(dist)
 #print(prediccion(x_data))
