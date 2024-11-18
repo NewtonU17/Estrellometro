@@ -1,6 +1,7 @@
 #['tyc', 'gaia', 'hyg', 'hip', 'hd', 'hr', 'gl', 'flam', 'ra','dec',  'mag', 'ci', 'rv', "con"]
 import pandas as pd
 import numpy as np
+import sklearn
 from sklearn.ensemble import RandomForestRegressor
 import pickle as pk
 
