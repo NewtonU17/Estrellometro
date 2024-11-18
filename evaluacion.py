@@ -3,7 +3,7 @@ import pandas as pd
 import numpy as np
 import sklearn
 from sklearn.ensemble import RandomForestRegressor
-import pickle as pk
+import pickle
 
 def preparacion(values):
     con = np.array(values[13])
@@ -35,7 +35,7 @@ def preparacion(values):
 
 def prediccion(x_data):
     with open("model_simple", 'rb') as f:
-        loaded_model = pickle.load(f)
+        modelo_escogido = pickle.load(f)
     dist = modelo_escogido.predict(x_data)
     return(dist)
 #print(prediccion(x_data))
